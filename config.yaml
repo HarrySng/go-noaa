@@ -1,0 +1,102 @@
+## Configuration file
+## Define endpoints and optional parameters
+## How to use:
+  ## Uncomment the desired block (all lines marked with a single #)
+  ## Edit optional parameters accordingly
+
+## See the following link for parameter definitions
+## https://www.ncdc.noaa.gov/cdo-web/webservices/v2#gettingstarted
+
+---
+endpoints:
+
+## -----------------
+- endpoint: 'datasets'
+- datatypeid: ''              # ACMH
+- locationid: ''              # FIPS:37
+- stationid: ''               # COOP:010957
+- startdate: ''               # 1970-10-03
+- enddate: ''                 # 2012-09-10
+- sortfield: ''               # name
+- sortorder: 'asc'            # desc
+- limit: '25'                 # 42
+- offset: '0'                 # 24
+
+## -----------------
+#- endpoint: 'datacategories'
+#- datasetid: ''               # GCOM
+#- locationid: ''              # FIPS:37
+#- stationid: ''               # COOP:010957
+#- startdate: ''               # 1970-10-03
+#- enddate: ''                 # 2012-09-10
+#- sortfield: ''               # name
+#- sortorder: 'asc'            # desc
+#- limit: '25'                 # 42
+#- offset: '0'                 # 24
+
+## -----------------
+#- endpoint: 'datatypes'
+#- datasetid: ''               # GCOM
+#- locationid: ''              # FIPS:37
+#- stationid: ''               # COOP:010957
+#- datacategoryid: ''          # TEMP
+#- startdate: ''               # 1970-10-03
+#- enddate: ''                 # 2012-09-10
+#- sortfield: ''               # name
+#- sortorder: 'asc'            # desc
+#- limit: '25'                 # 42
+#- offset: '0'                 # 24
+
+## -----------------
+#- endpoint: 'locationcategories'
+#- datasetid: ''               # GCOM
+#- startdate: ''               # 1970-10-03
+#- enddate: ''                 # 2012-09-10
+#- sortfield: ''               # name
+#- sortorder: 'asc'            # desc
+#- limit: '25'                 # 42
+#- offset: '0'                 # 24
+
+## -----------------
+#- endpoint: 'locations'
+#- datasetid: ''               # GCOM
+#- locationcategoryid: ''      # CITY
+#- datacategoryid: ''          # TEMP
+#- startdate: ''               # 1970-10-03
+#- enddate: ''                 # 2012-09-10
+#- sortfield: ''               # name
+#- sortorder: 'asc'            # desc
+#- limit: '25'                 # 42
+#- offset: '0'                 # 24
+
+## -----------------
+#- endpoint: 'stations'
+#- datasetid: ''               # GCOM
+#- locationid: ''              # FIPS:37
+#- datacategoryid: ''          # TEMP
+#- datatypeid: ''              # ACMH
+#- extent1: ''                 # 47.50
+#- extent2: ''                 # -122.5
+#- extent3: ''                 # 47.60
+#- extent4: ''                 # -121.5
+#- startdate: ''               # 1970-10-03
+#- enddate: ''                 # 2012-09-10
+#- sortfield: ''               # name
+#- sortorder: 'asc'            # desc
+#- limit: '25'                 # 42
+#- offset: '0'                 # 24
+
+## -----------------
+#- endpoint: 'data'
+#- datasetid: ''               # GCOM
+#- datatypeid: ''              # ACMH
+#- locationid: ''              # FIPS:37
+#- stationid: ''               # COOP:010957
+#- startdate: ''               # 1970-10-03
+#- enddate: ''                 # 2012-09-10
+#- units: ''                   # metric
+#- sortfield: ''               # name
+#- sortorder: 'asc'            # desc
+#- limit: '25'                 # 42
+#- offset: '0'                 # 24
+#- includemetadata: 'true'     # false
