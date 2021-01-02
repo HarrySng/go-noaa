@@ -1,36 +1,33 @@
 package main
 
-import (
-	"errors"
-	"io/ioutil"
+import "fmt"
 
-	"gopkg.in/yaml.v2"
-)
+func buildRequest(config map[string]string) string {
+	var r string
 
-func loadConfig() map[string]string {
-	f := "config.yaml"               // Config file
-	c := cData{}                     // Initiate the struct
-	yfile, err := ioutil.ReadFile(f) // Read file
-	handleError(err)
-	err = yaml.Unmarshal(yfile, &c) // Unmarshall
-	handleError(err)
+	// Now build r step by step
 
-	config := make(map[string]string) // Create an empty map to hold configs
+	// Adding outside loop as this is minimum requirement
+	r = url + config["endpoint"]
 
-	for _, v := range c.Endpoint { // Iterate over parent element (- endpoints)
-		// Ignore its key as there is no key, the value holds each config block
-		for k, vv := range v { // Within each config block, extract key, value pair
-			config[k] = vv // Push values into empty map object
+	for k, v := range config {
+		/*
+			There are several cases here.
+			- endpoint key needs to be checked within the
+			loop as well as order of keys is random.
+			- Different format
+				- url/datasets
+				- url/datasets/GSOY
+				- url/datasets?datatypeid=TOBS
+				- url/datatypes?datacategoryid=TEMP&limit=56
+		*/
+
+		if k == "endpoint" {
+			continue
+		} else {
+			fmt.Println(k, v)
 		}
+
 	}
-	/*
-		Sanity check on the config that may have been overlooked by Unmarshal.
-		1. Check that the mandatory key "endpoint" is present.
-		2. Check that there are no duplicate keys uncommented in the file.
-	*/
-	if _, ok := config["endpoint"]; !ok {
-		err := errors.New("The mandatory 'endpoint' configuration key is missing. Please check config.yaml")
-		handleError(err)
-	}
-	return config
+	return r
 }

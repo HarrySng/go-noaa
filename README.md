@@ -31,17 +31,20 @@ echo $TOKEN
 1. Set up the `config.yaml` file and pass it to the program with `-config config.yaml` flag.
 2. Run the program without the flag and select prompts while the program executes.
 
-### Method 1: Setting up `config.yaml`
+### Method 1: With configuration file
 * The file is divided into blocks corresponding to each endpoint of the API.
 * Each block has `key:value` pairs corresponding to parameters passed to web request.
 * Uncomment only one block and fill in the optional parameters as required.
 * Save the file and run the program with `go-noaa -config config.yaml`
 
 
-### Method 2: Run the program without config.yaml
+### Method 2: Without configuration file
 * Run the program without the config flag `go-noaa`
-* Follow the prompts on the command line and select the parameters.
+* Follow the prompts on the command line and enter parameters.
 
 
 <br/><br/>
 
+# Pending
+* Handle duplicates in config file
+* Remove repetitive code in `buildConfig()`
