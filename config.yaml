@@ -11,28 +11,28 @@
 endpoints:
 
 ## -----------------
-- endpoint: 'datasets'
-- datatypeid: ''              # ACMH
-- locationid: ''              # FIPS:37
-- stationid: ''               # COOP:010957
-- startdate: ''               # 1970-10-03
-- enddate: ''                 # 2012-09-10
-- sortfield: ''               # name
-- sortorder: 'asc'            # desc
-- limit: '25'                 # 42
-- offset: '0'                 # 24
-
-## -----------------
-#- endpoint: 'datacategories'
-#- datasetid: ''               # GCOM
+#- endpoint: 'datasets'
+#- datatypeid: ''              # ACMH
 #- locationid: ''              # FIPS:37
 #- stationid: ''               # COOP:010957
 #- startdate: ''               # 1970-10-03
 #- enddate: ''                 # 2012-09-10
 #- sortfield: ''               # name
-#- sortorder: 'asc'            # desc
-#- limit: '25'                 # 42
-#- offset: '0'                 # 24
+#- sortorder: ''            # desc (default is asc)
+#- limit: ''                 # 42
+#- offset: ''                 # 24
+
+## -----------------
+#- endpoint: 'datacategories'
+#- datasetid: 'NEXRAD2'               # GCOM
+#- locationid: ''              # FIPS:37
+#- stationid: ''               # COOP:010957
+#- startdate: ''               # 1970-10-03
+#- enddate: ''                 # 2012-09-10
+#- sortfield: ''               # name
+#- sortorder: ''            # desc (default is asc)
+#- limit: ''                 # 42
+#- offset: ''                 # 24
 
 ## -----------------
 #- endpoint: 'datatypes'
@@ -43,9 +43,9 @@ endpoints:
 #- startdate: ''               # 1970-10-03
 #- enddate: ''                 # 2012-09-10
 #- sortfield: ''               # name
-#- sortorder: 'asc'            # desc
-#- limit: '25'                 # 42
-#- offset: '0'                 # 24
+#- sortorder: ''            # desc (default is asc)
+#- limit: ''                 # 42
+#- offset: ''                 # 24
 
 ## -----------------
 #- endpoint: 'locationcategories'
@@ -53,9 +53,9 @@ endpoints:
 #- startdate: ''               # 1970-10-03
 #- enddate: ''                 # 2012-09-10
 #- sortfield: ''               # name
-#- sortorder: 'asc'            # desc
-#- limit: '25'                 # 42
-#- offset: '0'                 # 24
+#- sortorder: ''            # desc (default is asc)
+#- limit: ''                 # 42
+#- offset: ''                 # 24
 
 ## -----------------
 #- endpoint: 'locations'
@@ -65,9 +65,9 @@ endpoints:
 #- startdate: ''               # 1970-10-03
 #- enddate: ''                 # 2012-09-10
 #- sortfield: ''               # name
-#- sortorder: 'asc'            # desc
-#- limit: '25'                 # 42
-#- offset: '0'                 # 24
+#- sortorder: ''            # desc (default is asc)
+#- limit: ''                 # 42
+#- offset: ''                 # 24
 
 ## -----------------
 #- endpoint: 'stations'
@@ -82,21 +82,21 @@ endpoints:
 #- startdate: ''               # 1970-10-03
 #- enddate: ''                 # 2012-09-10
 #- sortfield: ''               # name
-#- sortorder: 'asc'            # desc
-#- limit: '25'                 # 42
-#- offset: '0'                 # 24
+#- sortorder: ''            # desc (default is asc)
+#- limit: ''                 # 42
+#- offset: ''                 # 24
 
 ## -----------------
-#- endpoint: 'data'
-#- datasetid: ''               # GCOM
-#- datatypeid: ''              # ACMH
-#- locationid: ''              # FIPS:37
-#- stationid: ''               # COOP:010957
-#- startdate: ''               # 1970-10-03
-#- enddate: ''                 # 2012-09-10
-#- units: ''                   # metric
-#- sortfield: ''               # name
-#- sortorder: 'asc'            # desc
-#- limit: '25'                 # 42
-#- offset: '0'                 # 24
-#- includemetadata: 'true'     # false
+- endpoint: 'data'
+- datasetid: 'GSOM'               # GSOM
+- datatypeid: ''              # ACMH
+- locationid: 'ZIP:28801'              # FIPS:37
+- stationid: ''               # COOP:010957
+- startdate: '2010-05-01'               # 1970-10-03
+- enddate: '2010-05-01'                 # 2012-09-10
+- units: ''                   # metric
+- sortfield: ''               # name
+- sortorder: ''            # desc (default is asc)
+- limit: ''                 # 42
+- offset: ''                 # 24
+- includemetadata: ''     # false
