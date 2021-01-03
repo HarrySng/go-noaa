@@ -51,8 +51,16 @@ func main() {
 	*/
 
 	r := buildRequest(config)
-
 	fmt.Println(r)
+
+	data := makeRequest(r)
+
+	// Temporarily, write data to a file for testing
+	f, err := os.Create("data.txt")
+	handleError(err)
+	_, err = f.WriteString(data)
+	handleError(err)
+	fmt.Println("data.txt created")
 }
 
 func handleError(err error) {
