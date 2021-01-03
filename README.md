@@ -48,3 +48,5 @@ echo $TOKEN
 # Pending
 * Handle duplicates in config file
 * Remove repetitive code in `buildConfig()`
+* Handle extent case for stations/ endpoint
+* Handle multiple parameters separated by ampersand
