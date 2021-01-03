@@ -72,21 +72,12 @@ func buildConfig() map[string]string {
 		config["sortfield"] = ask("\nEnter field to sort results by (name): ")
 
 		sortorder := ask("\nType 'desc' to change sort order or press enter for 'asc':")
-		if sortorder == "" {
-			sortorder = "asc"
-		}
 		config["sortorder"] = sortorder
 
 		limit := ask("\nSet limit of results returned or press Enter for default (25): ")
-		if limit == "" {
-			limit = "25"
-		}
 		config["limit"] = limit
 
 		offset := ask("\nEnter offset value or press Enter for default (0): ")
-		if offset == "" {
-			offset = "0"
-		}
 		config["offset"] = offset
 
 		// Now handle individual parameters case by case
@@ -178,9 +169,6 @@ func buildConfig() map[string]string {
 			config["units"] = units
 
 			includemetadata := ask("\nEnter units (metric): ")
-			if includemetadata == "" {
-				includemetadata = "true"
-			}
 			config["includemetadata"] = includemetadata
 		}
 	} else {
