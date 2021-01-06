@@ -5,6 +5,14 @@ To fix: All optional parameters are not appended
 with ?. Only the first is, rest are appended with &
 */
 
+// Endpoint is an interface to hold config.yaml0
+type Endpoint map[string]string
+
+// cData is a struct to hold unmarshalled config.yaml data
+type cData struct {
+	Endpoint []Endpoint `yaml:"endpoints"`
+}
+
 func buildRequest(config map[string]string) string {
 	var r string
 
