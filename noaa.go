@@ -15,14 +15,6 @@ import (
 var url = "https://www.ncdc.noaa.gov/cdo-web/api/v2/"
 var token string
 
-// Endpoint is an interface to hold config.yaml0
-type Endpoint map[string]string
-
-// cData is a struct to hold unmarshalled config.yaml data
-type cData struct {
-	Endpoint []Endpoint `yaml:"endpoints"`
-}
-
 func main() {
 
 	authenticate() // Authentication checkpoint to verify token
@@ -51,16 +43,9 @@ func main() {
 	*/
 
 	r := buildRequest(config)
-	fmt.Println(r)
 
-	data := makeRequest(r)
+	makeRequest(r) // Writes data to resp.json file
 
-	// Temporarily, write data to a file for testing
-	f, err := os.Create("data.txt")
-	handleError(err)
-	_, err = f.WriteString(data)
-	handleError(err)
-	fmt.Println("data.txt created")
 }
 
 func handleError(err error) {
