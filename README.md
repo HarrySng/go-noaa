@@ -39,14 +39,16 @@ echo $TOKEN
 
 
 ### Method 2: Without configuration file
+* Not fully implemented yet.
 * Run the program without the config flag `go-noaa`
 * Follow the prompts on the command line and enter parameters.
 
+## Output
+* API responds in json format which is written to `resp.json`.
 
 <br/><br/>
 
 # Pending
 * Handle duplicates in config file
-* Remove repetitive code in `buildConfig()`
 * Handle extent case for stations/ endpoint
 * Handle multiple parameters separated by ampersand
